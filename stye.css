@@ -295,3 +295,28 @@ a {
   line-height: 1.8;
   margin-bottom: 20px;
 }
+/*gallery*/
+.gallery {
+  padding: 100px 0;
+  background-color: #faf7f4;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
