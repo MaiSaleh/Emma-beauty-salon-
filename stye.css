@@ -408,3 +408,38 @@ a {
     font-size: 34px;
   }
 }
+
+/*booking section*/
+.booking {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.booking-form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 20px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #c89b6d;
+}
+
+.booking button {
+  margin-top: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
