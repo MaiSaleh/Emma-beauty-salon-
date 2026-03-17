@@ -295,7 +295,7 @@ a {
   line-height: 1.8;
   margin-bottom: 20px;
 }
-/*gallery*/
+/*gallery--------*/
 .gallery {
   padding: 100px 0;
   background-color: #faf7f4;
@@ -408,6 +408,7 @@ a {
     font-size: 34px;
   }
 }
+/*=====================*/
 
 /*booking section*/
 .booking {
@@ -440,6 +441,139 @@ a {
 .booking button {
   margin-top: 10px;
 }
+/*smoth scroll*/
 html{
     scroll-behavior: smooth;
 }
+/*============*/
+
+/* contact section*/
+.contact {
+  padding: 100px 0;
+  background-color: #faf7f4;
+  text-align: center;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.contact-info {
+  text-align: left;
+  font-size: 1rem;
+  color: #444;
+  line-height: 2;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c89b6d;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}
+/*=============================*/
+
+/*footer section*/
+
+.footer {
+  background-color: #2f2a27;
+  color: #f5eee8;
+  padding: 70px 0 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  color: #e7c6a5;
+}
+
+.footer-logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-col p {
+  color: #ddd2ca;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #ddd2ca;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #e7c6a5;
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #cfc2b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+}
+/*===============*/
