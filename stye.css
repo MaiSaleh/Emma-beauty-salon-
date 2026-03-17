@@ -266,3 +266,32 @@ a {
   font-size: 0.9rem;
   color: #666;
 }
+
+/*about section*/
+.about {
+  padding: 100px 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-text h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
