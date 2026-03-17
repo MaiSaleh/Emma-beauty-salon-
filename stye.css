@@ -577,3 +577,12 @@ html{
   }
 }
 /*===============*/
+.footer-bottom a {
+  color: #e7c6a5;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
