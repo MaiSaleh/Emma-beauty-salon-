@@ -330,6 +330,73 @@
 </div>
 </footer>
 <script src="script.js"></script>
+<!---->
+<section style="padding:40px; text-align:center;">
+  <h2>Test Review Form</h2>
+  <form id="review-form" style="max-width:500px; margin:20px auto; display:grid; gap:12px;">
+    <input id="review-name" type="text" placeholder="Your Name" required style="padding:12px;" />
+    <textarea id="review-comment" placeholder="Your Comment" rows="4" required style="padding:12px;"></textarea>
+    <input id="review-rating" type="number" min="1" max="5" step="0.5" placeholder="Rating" required style="padding:12px;" />
+    <button type="submit" style="padding:12px;">Submit Review</button>
+  </form>
+  <p id="review-message"></p>
+</section>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
+  const firebaseConfig = {
+    apiKey: "PUT_YOUR_API_KEY_HERE",
+    authDomain: "emma-beauty-salon.firebaseapp.com",
+    projectId: "emma-beauty-salon",
+    storageBucket: "emma-beauty-salon.firebasestorage.app",
+    messagingSenderId: "167354639455",
+    appId: "1:167354639455:web:6965870ebc50e8f49427ea"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  console.log("Firebase connected ✅");
+
+  const reviewForm = document.getElementById("review-form");
+  const reviewName = document.getElementById("review-name");
+  const reviewComment = document.getElementById("review-comment");
+  const reviewRating = document.getElementById("review-rating");
+  const reviewMessage = document.getElementById("review-message");
+
+  reviewForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = reviewName.value.trim();
+    const comment = reviewComment.value.trim();
+    const rating = Number(reviewRating.value);
+
+    if (!name || !comment || !rating || rating < 1 || rating > 5) {
+      reviewMessage.textContent = "Please fill all fields correctly.";
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "reviews"), {
+        name,
+        comment,
+        rating,
+        createdAt: serverTimestamp()
+      });
+
+      reviewMessage.textContent = "Review submitted successfully!";
+      reviewForm.reset();
+    } catch (error) {
+      console.error(error);
+      reviewMessage.textContent = "Something went wrong.";
+    }
+  });
+</script>
 </body>
 </html>
