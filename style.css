@@ -629,8 +629,9 @@ html{
 }
 
 .testimonial-card span {
-  color: #b68658;
-  font-size: 0.9rem;
+  color: #c89b6d;
+  font-size: 1rem;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 992px) {
@@ -638,3 +639,4 @@ html{
     grid-template-columns: 1fr;
   }
 }
+

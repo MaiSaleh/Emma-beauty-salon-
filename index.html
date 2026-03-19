@@ -126,39 +126,14 @@
 </section>
 
 <!--testimonials section-->
-
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
   <div class="container">
     <h2 class="section-title">What Our Clients Say</h2>
     <p class="section-subtitle">
-      Hear from our happy clients who trust Emma Beauty Salon for their beauty experience.
+      Hear from our happy clients who trust Emma Beauty Salon.
     </p>
 
-    <div class="testimonials-grid">
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          “Amazing service and such a relaxing atmosphere. I loved my hairstyle and makeup!”
-        </p>
-        <h3>Sarah M.</h3>
-        <span>Regular Client</span>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          “The staff are so professional and friendly. My nails looked absolutely beautiful.”
-        </p>
-        <h3>Lina A.</h3>
-        <span>Beauty Client</span>
-      </div>
-
-      <div class="testimonial-card">
-        <p class="testimonial-text">
-          “One of the best beauty salon experiences I’ve had. Elegant, clean, and professional.”
-        </p>
-        <h3>Nour K.</h3>
-        <span>New Client</span>
-      </div>
-    </div>
+    <div class="testimonials-grid" id="reviews-container"></div>
   </div>
 </section>
 
@@ -329,7 +304,7 @@
   </p>
 </div>
 </footer>
-<script src="script.js"></script>
+
 <!---->
 <section style="padding:40px; text-align:center;">
   <h2>Test Review Form</h2>
@@ -341,62 +316,8 @@
   </form>
   <p id="review-message"></p>
 </section>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-  import {
-    getFirestore,
-    collection,
-    addDoc,
-    serverTimestamp
-  } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "PUT_YOUR_API_KEY_HERE",
-    authDomain: "emma-beauty-salon.firebaseapp.com",
-    projectId: "emma-beauty-salon",
-    storageBucket: "emma-beauty-salon.firebasestorage.app",
-    messagingSenderId: "167354639455",
-    appId: "1:167354639455:web:6965870ebc50e8f49427ea"
-  };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  console.log("Firebase connected ✅");
-
-  const reviewForm = document.getElementById("review-form");
-  const reviewName = document.getElementById("review-name");
-  const reviewComment = document.getElementById("review-comment");
-  const reviewRating = document.getElementById("review-rating");
-  const reviewMessage = document.getElementById("review-message");
-
-  reviewForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = reviewName.value.trim();
-    const comment = reviewComment.value.trim();
-    const rating = Number(reviewRating.value);
-
-    if (!name || !comment || !rating || rating < 1 || rating > 5) {
-      reviewMessage.textContent = "Please fill all fields correctly.";
-      return;
-    }
-
-    try {
-      await addDoc(collection(db, "reviews"), {
-        name,
-        comment,
-        rating,
-        createdAt: serverTimestamp()
-      });
-
-      reviewMessage.textContent = "Review submitted successfully!";
-      reviewForm.reset();
-    } catch (error) {
-      console.error(error);
-      reviewMessage.textContent = "Something went wrong.";
-    }
-  });
-</script>
+<script type="module" src="script.js"></script>
 </body>
 </html>
