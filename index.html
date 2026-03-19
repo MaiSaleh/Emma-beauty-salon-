@@ -133,6 +133,15 @@
       Hear from our happy clients who trust Emma Beauty Salon.
     </p>
 
+    <div class="review-form-wrapper">
+      <form id="review-form" class="review-form">
+        <input id="review-name" type="text" placeholder="Your Name" required />
+        <textarea id="review-comment" placeholder="Your Comment" rows="4" required></textarea>
+        <input id="review-rating" type="number" min="1" max="5" step="0.5" placeholder="Rating" required />
+        <button type="submit" class="btn primary-btn">Submit Review</button>
+      </form>
+      <p id="review-message"></p>
+    </div>
     <div class="testimonials-grid" id="reviews-container"></div>
   </div>
 </section>
@@ -305,7 +314,7 @@
 </div>
 </footer>
 
-<!---->
+<!----
 <section style="padding:40px; text-align:center;">
   <h2>Test Review Form</h2>
   <form id="review-form" style="max-width:500px; margin:20px auto; display:grid; gap:12px;">
@@ -315,7 +324,7 @@
     <button type="submit" style="padding:12px;">Submit Review</button>
   </form>
   <p id="review-message"></p>
-</section>
+</section>-->
 
 
 <script type="module" src="script.js"></script>

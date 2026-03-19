@@ -640,3 +640,47 @@ html{
   }
 }
 
+.review-form-wrapper {
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+.review-form {
+  display: grid;
+  gap: 15px;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  background-color: #fff;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: #c89b6d;
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.review-form .btn {
+  width: fit-content;
+  justify-self: center;
+  min-width: 180px;
+}
+
+#review-message {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #b68658;
+}
