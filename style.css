@@ -684,3 +684,11 @@ html{
   font-size: 0.95rem;
   color: #b68658;
 }
+.testimonials .btn {
+  display: inline-block;
+  margin: 30px auto 0;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  width: auto;
+}
