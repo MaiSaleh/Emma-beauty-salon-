@@ -87,6 +87,9 @@ a {
   align-items: center;
   text-align: center;
   padding: 0 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .overlay {
@@ -859,5 +862,12 @@ html{
 
   .hero {
     padding-top: 160px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-position: center top;
+    min-height: 100vh;
   }
 }
