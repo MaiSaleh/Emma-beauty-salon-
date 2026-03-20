@@ -81,19 +81,13 @@ a {
 .hero {
   position: relative;
   min-height: 100vh;
-  background-image: url("images/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("images/hero\ image2.jpg") center/cover no-repeat;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    rgba(34, 25, 25, 0.30),
-    rgba(34, 25, 25, 0.30)
-  );
+  background: rgba(34, 25, 25, 0.25);
 }
 
 .hero-content {
